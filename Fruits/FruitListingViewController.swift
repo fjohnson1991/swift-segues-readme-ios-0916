@@ -40,7 +40,7 @@ extension FruitListingViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "ShowFruitDetails" { return }
+        if segue.identifier != "ShowFruit" { return }
         if let dest = segue.destination as? FruitViewController,
                let indexPath = tableView.indexPathForSelectedRow {
             dest.fruit = fruits[(indexPath as NSIndexPath).row]
